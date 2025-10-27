@@ -10,6 +10,6 @@ Json_Body = {
 }
 json_string = json.dumps(Json_Body)
 response = json.loads(json_string)
-print(response.get("NoOfConsumer"))
+print("Consumer Count -> ",response.get("NoOfConsumer"))
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
