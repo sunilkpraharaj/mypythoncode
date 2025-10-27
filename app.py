@@ -9,6 +9,6 @@ Json_Body = {
     "MaxDesiredInstances": 6
 }
 json_string = json.dumps(Json_Body)
-print(json_string)
+print(json_string.get("NoOfConsumer"))
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
