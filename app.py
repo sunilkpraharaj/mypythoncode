@@ -8,6 +8,7 @@ Json_Body = {
     "MinNoOfConsumer": 1,
     "MaxDesiredInstances": 6
 }
-json_object = json.dumps(Json_Body)
+json_string = json.dumps(Json_Body)
+print(json_string)
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
