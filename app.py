@@ -8,6 +8,6 @@ Json_Body = {
     "MinNoOfConsumer": 1,
     "MaxDesiredInstances": 6
 }
-json_object = json.loads(new_component_property)
+json_object = json.loads(Json_Body)
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
