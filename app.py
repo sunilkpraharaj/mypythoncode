@@ -79,8 +79,8 @@ Json_Body = json.loads(Json_String)
 print("Consumer Count -> ",Json_Body.get("NoOfConsumer"))
 print("OrderLine Promising Info External Route Id -> ", Json_Body["OrderLinePromisingInfo"]["ExternalRouteId"])
 print("Order Line Id -> ",Json_Body["OrderLine"][0]["OrderLineId"])
-for val in find_in_json(data, "ItemId"):
-    print(val)
-result = [x for x in find_in_json(data, "NoteType") if x == "Gift From"]  
+for val in find_in_json(Json_Body, "ItemId"):
+  print(val)
+result = [x for x in find_in_json(Json_Body, "NoteType") if x == "Gift From"]  
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
