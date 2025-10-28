@@ -63,9 +63,24 @@ Json_String = '''{
         }
     ]
 }'''
+
+def find_in_json(obj, key_to_find):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == key_to_find:
+                yield v
+            else:
+                yield from find_in_json(v, key_to_find)
+    elif isinstance(obj, list):
+        for item in obj:
+            yield from find_in_json(item, key_to_find)
+
 Json_Body = json.loads(Json_String)
 print("Consumer Count -> ",Json_Body.get("NoOfConsumer"))
 print("OrderLine Promising Info External Route Id -> ", Json_Body["OrderLinePromisingInfo"]["ExternalRouteId"])
 print("Order Line Id -> ",Json_Body["OrderLine"][0]["OrderLineId"])
+for val in find_in_json(data, "ItemId"):
+    print(val)
+result = [x for x in find_in_json(data, "NoteType") if x == "Gift From"]  
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
