@@ -81,6 +81,7 @@ print("OrderLine Promising Info External Route Id -> ", Json_Body["OrderLineProm
 print("Order Line Id -> ",Json_Body["OrderLine"][0]["OrderLineId"])
 for val in find_in_json(Json_Body, "ItemId"):
   print(val)
-result = [x for x in find_in_json(Json_Body, "NoteType") if x == "Gift From"]  
+result = [x for x in find_in_json(Json_Body, "NoteType") if x == "Gift From"]
+print(result)
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
