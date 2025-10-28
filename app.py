@@ -17,6 +17,6 @@ Json_Body = {
 json_string = json.dumps(Json_Body)
 response = json.loads(json_string)
 print("Consumer Count -> ",response.get("NoOfConsumer"))
-print("OrderLine Promising Info -> ",json.loads(response.get("OrderLinePromisingInfo")).get("ExternalRouteId"))
+print("OrderLine Promising Info -> ",response.get("OrderLinePromisingInfo"))
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
