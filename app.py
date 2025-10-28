@@ -2,7 +2,7 @@ import requests
 import json
 
 
-Json_Body = {
+Json_String = '''{
   "NoOfConsumer": 10,
   "MessageType": "inv-inv-ViewItemCacheRebuild",
   "MinNoOfConsumer": 1,
@@ -12,10 +12,9 @@ Json_Body = {
     "IsDeliveryByRequestedDate": false,
     "ExternalRouteId": "ecomorg:T0981"
   }
-}
-json_string = json.dumps(Json_Body)
-response = json.loads(json_string)
-print("Consumer Count -> ",response.get("NoOfConsumer"))
-print("OrderLine Promising Info -> ",response.get("OrderLinePromisingInfo"))
+}'''
+Json_Body = json.loads(Json_String)
+print("Consumer Count -> ",Json_Body.get("NoOfConsumer"))
+print("OrderLine Promising Info -> ",Json_Body.get("OrderLinePromisingInfo"))
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
