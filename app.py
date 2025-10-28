@@ -15,7 +15,6 @@ Json_String = '''{
 }'''
 Json_Body = json.loads(Json_String)
 print("Consumer Count -> ",Json_Body.get("NoOfConsumer"))
-print(Json_Body["OrderLinePromisingInfo"]["ExternalRouteId"])
-print("OrderLine Promising Info -> ",Json_Body.get("OrderLinePromisingInfo"),{}).get("ExternalRouteId")
+print("OrderLine Promising Info -> ", Json_Body["OrderLinePromisingInfo"]["ExternalRouteId"])
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
