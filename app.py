@@ -66,6 +66,6 @@ Json_String = '''{
 Json_Body = json.loads(Json_String)
 print("Consumer Count -> ",Json_Body.get("NoOfConsumer"))
 print("OrderLine Promising Info External Route Id -> ", Json_Body["OrderLinePromisingInfo"]["ExternalRouteId"])
-print(Json_Body["OrderLine"].get[0].get["OrderLineId"])
+print(Json_Body["OrderLine"][0])
 print("Logged in successfully ->> Test1!")
 print("Hello from GitHub! Sunil")
